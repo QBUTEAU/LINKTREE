@@ -1,0 +1,133 @@
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #E12319;
+}
+
+::-webkit-scrollbar-track {
+  background: #F1F1F1;
+}
+
+body {
+  margin: 0 auto;
+  padding: 60px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgb(10, 14, 23);
+  color: #F1F1F1;
+}
+
+.picture {
+  border: 2px #E12319 solid;
+  height: 120px;
+  width: 120px;
+  border-radius: 50%;
+  margin: 20px 0;
+  background: url(http://qbuteau.fr/portfolio/img/qbuteau-presentation.webp);
+  background-size: 150%;
+  background-position: center;
+}
+
+h1 {
+  margin: 2px 0;
+  font-weight: 600;
+  font-family: "Montserrat";
+}
+
+h3 {
+  margin: 2px 0 35px 0;
+  font-size: 16px;
+  font-weight: 400;
+  font-family: "Outfit";
+}
+
+a {
+  margin: 8px 0;
+  display: grid;
+  grid-template-columns: 0.4fr 1fr;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  text-align: center;
+  gap: 40px;
+  color: #F1F1F1;
+  font-size: 18px;
+  width: 400px;
+  height: 65px;
+  font-family: "Montserrat";
+  font-weight: 600;
+  border-radius: 40px;
+  transition: 0.2s;
+}
+a i {
+  font-size: 30px;
+  text-align: center;
+}
+a:hover {
+  transform: scale(1.05);
+}
+
+.instagram {
+  background-color: rgba(228, 64, 95, 0.4);
+  border: 2px solid #E4405F;
+}
+.instagram:hover {
+  background-color: #E4405F;
+}
+
+.behance {
+  background-color: rgba(23, 105, 255, 0.4);
+  border: 2px solid #1769FF;
+}
+.behance:hover {
+  background-color: #1769FF;
+}
+
+.github {
+  background-color: rgba(23, 21, 21, 0.4);
+  border: 2px solid #171515;
+}
+.github:hover {
+  background-color: #171515;
+}
+
+.portfolio {
+  background-color: rgba(3, 0, 26, 0.4);
+  border: 2px solid #03001a;
+}
+.portfolio:hover {
+  background-color: #03001a;
+}
+
+.linkedin {
+  background-color: rgba(0, 119, 181, 0.4);
+  border: 2px solid #0077B5;
+}
+.linkedin:hover {
+  background-color: #0077B5;
+}
+
+.mail {
+  background-color: rgba(212, 70, 56, 0.4);
+  border: 2px solid #D44638;
+}
+.mail:hover {
+  background-color: #D44638;
+}
+
+@media screen and (max-width: 600px) {
+  a {
+    height: 60px;
+    width: 70%;
+    font-size: 16px;
+  }
+  a i {
+    font-size: 25px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
