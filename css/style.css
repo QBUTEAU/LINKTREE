@@ -79,6 +79,14 @@ a:hover {
   background-color: #E4405F;
 }
 
+.x {
+  background-color: rgba(8, 8, 8, 0.4);
+  border: 2px solid #080808;
+}
+.x:hover {
+  background-color: #080808;
+}
+
 .behance {
   background-color: rgba(23, 105, 255, 0.4);
   border: 2px solid #1769FF;
