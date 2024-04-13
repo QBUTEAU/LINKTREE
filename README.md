@@ -1,6 +1,13 @@
-# Linktree_QBUTEAU
- Réalisation d'un site similaire à Linktree, qui permet de mettre en avant ses réseaux sociaux et les liens pour le contacter.
+# Linktree QBUTEAU
 
-[Lien du site](http://qbuteau.fr/link)
+Petit projet personnel inspiré du service Linktree.
 
- ### © 2024 Quentin Buteau - Tous droits réservés
+### 📜 Description :
+Inspiré du service Linktree, j'ai décidé de réaliser un petit site web mettant en avant l'ensemble de mes médias sociaux, ce qui permet d'accéder rapidement à chacun d'entre eux.
+
+### 💻 Technologies utilisés :
+![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
+![Sass/SCSS Badge](https://img.shields.io/badge/Sass/SCSS-CC6699?style=for-the-badge&logo=sass&logoColor=white)
+
+### © 2023 Quentin Buteau | Tous droits réservés
