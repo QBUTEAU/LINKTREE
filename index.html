@@ -1,46 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;800;900&family=Outfit&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;800;900&family=Outfit&display=swap"
+        rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Outfit&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="http://qbuteau.fr/assets/img/logoqb.png">
     <script src="https://kit.fontawesome.com/480db9540f.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/style.css">
     <title>Linktree - QBUTEAU</title>
 </head>
+
 <body>
     <div class="picture"></div>
     <h1>Quentin BUTEAU</h1>
     <h3>Développeur Front-End Junior</h3>
 
+    <a href="https://twitter.com/quentinbto_" class="x" target="_blank">
+        <i class="fa-brands fa-x-twitter"></i>
+        X
+    </a>
     <a href="https://instagram.com/quentin.bto" class="instagram" target="_blank">
-        <i class="fa-brands fa-instagram" style="color: #f1f1f1;"></i>
+        <i class="fa-brands fa-instagram"></i>
         Instagram
     </a>
-    <a href="https://twitter.com/quentinbto_" class="x" target="_blank">
-        <i class="fa-brands fa-x-twitter" style="color: #f1f1f1;"></i>
-        X - Twitter
+    <a href="https://letterboxd.com/mrnonome/films/by/entry-rating/" class="letterboxd" target="_blank">
+        <i class="fa-brands fa-letterboxd"></i>
+        Letterboxd
+    </a>
+
+    <hr>
+
+    <a onclick="copierTexte('discord')" class="discord">
+        <i class="fa-brands fa-discord"></i>
+        <p>Discord (<i class="fa-solid fa-copy"></i>)</p>
+    </a>
+    <a onclick="copierTexte('playstation')" class="playstation">
+        <i class="fa-brands fa-playstation"></i>
+        <p>PSN (<i class="fa-solid fa-copy"></i>)</p>
+    </a>
+
+    <hr>
+
+    <a href="http://qbuteau.fr" class="portfolio" target="_blank">
+        <i class="fa-solid fa-globe"></i>
+        Portfolio
+    </a>
     <a href="https://linkedin.com/in/quentin-buteau" class="linkedin" target="_blank">
-        <i class="fa-brands fa-linkedin-in" style="color: #f1f1f1;"></i>
+        <i class="fa-brands fa-linkedin-in"></i>
         LinkedIn
     </a>
     <a href="https://github.com/QBUTEAU" class="github" target="_blank">
-        <i class="fa-brands fa-github" style="color: #f1f1f1;"></i>
+        <i class="fa-brands fa-github"></i>
         GitHub
     </a>
-    <a href="http://qbuteau.fr/portfolio" class="portfolio" target="_blank">
-        <i class="fa-solid fa-globe" style="color: #f1f1f1;"></i>
-        Portfolio
-    </a>
     <a href="https://behance.net/qbuteau" class="behance" target="_blank">
-        <i class="fa-brands fa-behance" style="color: #f1f1f1;"></i>
+        <i class="fa-brands fa-behance"></i>
         Behance
     </a>
     <a href="mailto:buteauquentin10@gmail.com" class="mail" target="_blank">
-        <i class="fa-solid fa-envelope" style="color: #f1f1f1;"></i>
+        <i class="fa-solid fa-envelope"></i>
         Adresse mail
     </a>
+
+    <p class="copyright">&copy; 2024 | Quentin BUTEAU - fontawesome.com ⋅ Tous droits réservés</p>
+
+    <div id="copy-popup" class="copy-popup copy-ps copy-discord">
+    </div>
+
+    <script>
+        function copierTexte(classe) {
+            let texteACopier;
+            let messagePopup;
+            if (classe === 'discord') {
+                texteACopier = "quentin.bto";
+                messagePopup = "L'ID Discord de Quentin a été copié avec succès !";
+            } else if (classe === 'playstation') {
+                texteACopier = "MrNonomE";
+                messagePopup = "L'ID PSN de Quentin a été copié avec succès !";
+            }
+
+            /* Crée un élément temporaire pour copier le texte */
+            var tempInput = document.createElement("textarea");
+            tempInput.value = texteACopier;
+            document.body.appendChild(tempInput);
+
+            /* Sélectionne le texte dans l'élément temporaire */
+            tempInput.select();
+            tempInput.setSelectionRange(0, 99999); // Pour les navigateurs mobiles
+
+            /* Copie le texte dans le presse-papiers */
+            document.execCommand("copy");
+
+            /* Supprime l'élément temporaire */
+            document.body.removeChild(tempInput);
+
+            /* Modifie le contenu du popup en fonction du texte copié */
+            var popup = document.getElementById('copy-popup');
+            popup.textContent = messagePopup;
+
+            /* Affiche le popup */
+            popup.style.display = 'block';
+            popup.classList.add('show');
+            setTimeout(function () {
+                popup.style.display = 'none';
+                popup.classList.remove('show');
+            }, 2500);
+        }
+    </script>
+
 </body>
+
 </html>

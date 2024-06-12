@@ -27,7 +27,7 @@ body {
   width: 120px;
   border-radius: 50%;
   margin: 20px 0;
-  background: url(http://qbuteau.fr/portfolio/img/qbuteau-presentation.webp);
+  background: url(http://mmi22c03.mmi-troyes.fr/assets/img/qbuteau-presentation.webp);
   background-size: 150%;
   background-position: center;
 }
@@ -71,14 +71,6 @@ a:hover {
   transform: scale(1.05);
 }
 
-.instagram {
-  background-color: rgba(228, 64, 95, 0.4);
-  border: 2px solid #E4405F;
-}
-.instagram:hover {
-  background-color: #E4405F;
-}
-
 .x {
   background-color: rgba(8, 8, 8, 0.4);
   border: 2px solid #080808;
@@ -87,20 +79,36 @@ a:hover {
   background-color: #080808;
 }
 
-.behance {
-  background-color: rgba(23, 105, 255, 0.4);
-  border: 2px solid #1769FF;
+.instagram {
+  background-color: rgba(228, 64, 95, 0.4);
+  border: 2px solid #E4405F;
 }
-.behance:hover {
-  background-color: #1769FF;
+.instagram:hover {
+  background-color: #E4405F;
 }
 
-.github {
-  background-color: rgba(23, 21, 21, 0.4);
-  border: 2px solid #171515;
+.letterboxd {
+  background-color: rgba(40, 44, 52, 0.4);
+  border: 2px solid #282c34;
 }
-.github:hover {
-  background-color: #171515;
+.letterboxd:hover {
+  background-color: #282c34;
+}
+
+.discord {
+  background-color: rgba(88, 101, 242, 0.4);
+  border: 2px solid #5865F2;
+}
+.discord:hover {
+  background-color: #5865F2;
+}
+
+.playstation {
+  background-color: rgba(0, 55, 145, 0.4);
+  border: 2px solid #003791;
+}
+.playstation:hover {
+  background-color: #003791;
 }
 
 .portfolio {
@@ -119,6 +127,22 @@ a:hover {
   background-color: #0077B5;
 }
 
+.github {
+  background-color: rgba(23, 21, 21, 0.4);
+  border: 2px solid #171515;
+}
+.github:hover {
+  background-color: #171515;
+}
+
+.behance {
+  background-color: rgba(23, 105, 255, 0.4);
+  border: 2px solid #1769FF;
+}
+.behance:hover {
+  background-color: #1769FF;
+}
+
 .mail {
   background-color: rgba(212, 70, 56, 0.4);
   border: 2px solid #D44638;
@@ -127,14 +151,73 @@ a:hover {
   background-color: #D44638;
 }
 
+.discord,
+.playstation {
+  cursor: pointer;
+}
+
+.fa-copy {
+  margin: 0 5px;
+  font-size: 20px;
+}
+
+hr {
+  width: 30%;
+  border-radius: 20px;
+  border: 1px white solid;
+  margin: 20px 0;
+}
+
+.copyright {
+  font-size: 12px;
+  font-weight: 300;
+  font-family: "Montserrat";
+  margin-top: 50px;
+  padding: 4px 20px;
+  border: 0.5px solid #F1F1F1;
+  border-radius: 20px;
+}
+
+#copy-popup {
+  color: #F1F1F1;
+  font-weight: 700;
+  font-family: "Montserrat";
+  text-align: center;
+  background-color: green;
+  border: rgb(0, 58, 0) 3px solid;
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 50%;
+  z-index: 9999;
+  border-radius: 20px;
+  padding: 30px;
+  display: none;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+#copy-popup.show {
+  display: block;
+  opacity: 1;
+}
+
 @media screen and (max-width: 600px) {
   a {
     height: 60px;
     width: 70%;
-    font-size: 16px;
+    font-size: 15px;
   }
   a i {
     font-size: 25px;
+  }
+  .fa-copy {
+    font-size: 14px;
+    margin: 0 2px;
+  }
+  .copyright {
+    width: 60%;
+    text-align: center;
+    font-size: 9px;
   }
 }
 

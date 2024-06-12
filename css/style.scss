@@ -10,14 +10,16 @@ $white : #F1F1F1;
 ::-webkit-scrollbar {
     width: 8px;
 }
+
 ::-webkit-scrollbar-thumb {
     background: $red;
 }
+
 ::-webkit-scrollbar-track {
     background: $white;
 }
 
-body{
+body {
     margin: 0 auto;
     padding: 60px 0;
     display: flex;
@@ -28,24 +30,24 @@ body{
     color: $white;
 }
 
-.picture{
+.picture {
     border: 2px $red solid;
     height: 120px;
     width: 120px;
     border-radius: 50%;
     margin: 20px 0;
-    background: url(http://qbuteau.fr/portfolio/img/qbuteau-presentation.webp);
+    background: url(http://mmi22c03.mmi-troyes.fr/assets/img/qbuteau-presentation.webp);
     background-size: 150%;
     background-position: center;
 }
 
-h1{
+h1 {
     margin: 2px 0;
     font-weight: 600;
     font-family: "Montserrat";
 }
 
-h3{
+h3 {
     margin: 2px 0 35px 0;
     font-size: 16px;
     font-weight: 400;
@@ -53,7 +55,7 @@ h3{
 }
 
 
-a{
+a {
     margin: 8px 0;
     display: grid;
     grid-template-columns: 0.4fr 1fr;
@@ -70,46 +72,113 @@ a{
     font-weight: 600;
     border-radius: 40px;
     transition: 0.2s;
-    i{
+
+    i {
         font-size: 30px;
         text-align: center;
     }
-    &:hover{
+
+    &:hover {
         transform: scale(1.05);
     }
 }
 
 $colors: (
-  instagram: #E4405F,
-  x: #080808,
-  behance: #1769FF,
-  github: #171515,
-  portfolio: #03001a,
-  linkedin: #0077B5,
-  mail: #D44638
+    x: #080808,
+    instagram: #E4405F,
+    letterboxd: #282c34,
+
+    discord: #5865F2,
+    playstation: #003791,
+
+    portfolio: #03001a,
+    linkedin: #0077B5,
+    github: #171515,
+    behance: #1769FF,
+    mail: #D44638
 );
 
 @each $name, $color in $colors {
-  .#{$name} {
-    background-color: rgba($color, 0.4);
-    border: 2px solid $color;
-    &:hover{
-        background-color: $color;
-    }
-  }
-}
+    .#{$name} {
+        background-color: rgba($color, 0.4);
+        border: 2px solid $color;
 
-@media screen and (max-width: 600px){
-    a{
-        height: 60px;
-        width: 70%;
-        font-size: 16px;
-        i{
-            font-size: 25px;
+        &:hover {
+            background-color: $color;
         }
     }
 }
 
+.discord,
+.playstation {
+    cursor: pointer;
+}
 
+.fa-copy {
+    margin: 0 5px;
+    font-size: 20px;
+}
 
+hr {
+    width: 30%;
+    border-radius: 20px;
+    border: 1px white solid;
+    margin: 20px 0;
+}
 
+.copyright {
+    font-size: 12px;
+    font-weight: 300;
+    font-family: "Montserrat";
+    margin-top: 50px;
+    padding: 4px 20px;
+    border: 0.5px solid $white;
+    border-radius: 20px;
+}
+
+#copy-popup {
+    color: #F1F1F1;
+    font-weight: 700;
+    font-family: "Montserrat";
+    text-align: center;
+    background-color: green;
+    border: rgb(0, 58, 0) 3px solid;
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 50%;
+    z-index: 9999;
+    border-radius: 20px;
+    padding: 30px;
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+
+    &.show {
+        display: block;
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    a {
+        height: 60px;
+        width: 70%;
+        font-size: 15px;
+
+        i {
+            font-size: 25px;
+        }
+    }
+
+    .fa-copy {
+        font-size: 14px;
+        margin: 0 2px;
+    }
+
+    .copyright {
+        width: 60%;
+        text-align: center;
+        font-size: 9px;
+    }
+}
