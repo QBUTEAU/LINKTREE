@@ -19,6 +19,11 @@ $white : #F1F1F1;
     background: $white;
 }
 
+::selection {
+    background: $red;
+    color: $white;
+}
+
 body {
     margin: 0 auto;
     padding: 60px 0;
@@ -77,19 +82,12 @@ a {
         font-size: 30px;
         text-align: center;
     }
-
-    &:hover {
-        transform: scale(1.05);
-    }
 }
 
 $colors: (
     x: #080808,
     instagram: #E4405F,
     letterboxd: #282c34,
-
-    discord: #5865F2,
-    playstation: #003791,
 
     portfolio: #03001a,
     linkedin: #0077B5,
@@ -109,16 +107,6 @@ $colors: (
     }
 }
 
-.discord,
-.playstation {
-    cursor: pointer;
-}
-
-.fa-copy {
-    margin: 0 5px;
-    font-size: 20px;
-}
-
 hr {
     width: 30%;
     border-radius: 20px;
@@ -128,36 +116,9 @@ hr {
 
 .copyright {
     font-size: 12px;
-    font-weight: 300;
+    font-weight: 600;
     font-family: "Montserrat";
     margin-top: 50px;
-    padding: 4px 20px;
-    border: 0.5px solid $white;
-    border-radius: 20px;
-}
-
-#copy-popup {
-    color: #F1F1F1;
-    font-weight: 700;
-    font-family: "Montserrat";
-    text-align: center;
-    background-color: green;
-    border: rgb(0, 58, 0) 3px solid;
-    position: fixed;
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: 50%;
-    z-index: 9999;
-    border-radius: 20px;
-    padding: 30px;
-    display: none;
-    opacity: 0;
-    transition: opacity 0.5s ease-in-out;
-
-    &.show {
-        display: block;
-        opacity: 1;
-    }
 }
 
 @media screen and (max-width: 600px) {
@@ -169,11 +130,6 @@ hr {
         i {
             font-size: 25px;
         }
-    }
-
-    .fa-copy {
-        font-size: 14px;
-        margin: 0 2px;
     }
 
     .copyright {

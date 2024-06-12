@@ -34,17 +34,6 @@
 
     <hr>
 
-    <a onclick="copierTexte('discord')" class="discord">
-        <i class="fa-brands fa-discord"></i>
-        <p>Discord (<i class="fa-solid fa-copy"></i>)</p>
-    </a>
-    <a onclick="copierTexte('playstation')" class="playstation">
-        <i class="fa-brands fa-playstation"></i>
-        <p>PSN (<i class="fa-solid fa-copy"></i>)</p>
-    </a>
-
-    <hr>
-
     <a href="http://qbuteau.fr" class="portfolio" target="_blank">
         <i class="fa-solid fa-globe"></i>
         Portfolio
@@ -66,51 +55,7 @@
         Adresse mail
     </a>
 
-    <p class="copyright">&copy; 2024 | Quentin BUTEAU - fontawesome.com ⋅ Tous droits réservés</p>
-
-    <div id="copy-popup" class="copy-popup copy-ps copy-discord">
-    </div>
-
-    <script>
-        function copierTexte(classe) {
-            let texteACopier;
-            let messagePopup;
-            if (classe === 'discord') {
-                texteACopier = "quentin.bto";
-                messagePopup = "L'ID Discord de Quentin a été copié avec succès !";
-            } else if (classe === 'playstation') {
-                texteACopier = "MrNonomE";
-                messagePopup = "L'ID PSN de Quentin a été copié avec succès !";
-            }
-
-            /* Crée un élément temporaire pour copier le texte */
-            var tempInput = document.createElement("textarea");
-            tempInput.value = texteACopier;
-            document.body.appendChild(tempInput);
-
-            /* Sélectionne le texte dans l'élément temporaire */
-            tempInput.select();
-            tempInput.setSelectionRange(0, 99999); // Pour les navigateurs mobiles
-
-            /* Copie le texte dans le presse-papiers */
-            document.execCommand("copy");
-
-            /* Supprime l'élément temporaire */
-            document.body.removeChild(tempInput);
-
-            /* Modifie le contenu du popup en fonction du texte copié */
-            var popup = document.getElementById('copy-popup');
-            popup.textContent = messagePopup;
-
-            /* Affiche le popup */
-            popup.style.display = 'block';
-            popup.classList.add('show');
-            setTimeout(function () {
-                popup.style.display = 'none';
-                popup.classList.remove('show');
-            }, 2500);
-        }
-    </script>
+    <p class="copyright">&copy; 2024 ⋅ Quentin BUTEAU | Tous droits réservés</p>
 
 </body>
 
