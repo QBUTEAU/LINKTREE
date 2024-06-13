@@ -3,7 +3,7 @@
 Petit projet personnel inspiré du service Linktree.
 
 ### 📜 Description :
-Inspiré du service Linktree, j'ai décidé de réaliser un petit site web mettant en avant l'ensemble de mes médias sociaux, ce qui permet d'accéder rapidement à chacun d'entre eux.
+Inspiré du service Linktree, j'ai décidé de réaliser une page web mettant en avant l'ensemble de mes médias sociaux, professionnels et personnels, ce qui permet d'accéder rapidement à chacun d'entre eux.
 
 ### 💻 Langages utilisés :
 ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
