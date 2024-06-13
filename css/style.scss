@@ -1,11 +1,7 @@
 $red : #E12319;
-$blue : rgb(10, 14, 23);
+$blue : #0A0E17;
 $white : #F1F1F1;
 
-// $instagram : #E4405F;
-// $behance : #1769FF;
-// $github : #6E5494;
-// $portfolio : #03001a;
 
 ::-webkit-scrollbar {
     width: 8px;
@@ -84,12 +80,20 @@ a {
     }
 }
 
+.x,
+.portfolio,
+.github {
+    border: 2px solid $white !important;
+}
+
 $colors: (
     x: #080808,
     instagram: #E4405F,
     letterboxd: #282c34,
+    gaming: #008080,
+    spotify: #1DB954,
 
-    portfolio: #03001a,
+    portfolio: #0A0E17,
     linkedin: #0077B5,
     github: #171515,
     behance: #1769FF,
@@ -103,6 +107,7 @@ $colors: (
 
         &:hover {
             background-color: $color;
+            transform: scale(1.03);
         }
     }
 }
@@ -119,6 +124,7 @@ hr {
     font-weight: 600;
     font-family: "Montserrat";
     margin-top: 50px;
+    text-align: center;
 }
 
 @media screen and (max-width: 600px) {

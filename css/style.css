@@ -22,7 +22,7 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-color: rgb(10, 14, 23);
+  background-color: #0A0E17;
   color: #F1F1F1;
 }
 
@@ -73,12 +73,19 @@ a i {
   text-align: center;
 }
 
+.x,
+.portfolio,
+.github {
+  border: 2px solid #F1F1F1 !important;
+}
+
 .x {
   background-color: rgba(8, 8, 8, 0.4);
   border: 2px solid #080808;
 }
 .x:hover {
   background-color: #080808;
+  transform: scale(1.03);
 }
 
 .instagram {
@@ -87,6 +94,7 @@ a i {
 }
 .instagram:hover {
   background-color: #E4405F;
+  transform: scale(1.03);
 }
 
 .letterboxd {
@@ -95,14 +103,34 @@ a i {
 }
 .letterboxd:hover {
   background-color: #282c34;
+  transform: scale(1.03);
+}
+
+.gaming {
+  background-color: rgba(0, 128, 128, 0.4);
+  border: 2px solid #008080;
+}
+.gaming:hover {
+  background-color: #008080;
+  transform: scale(1.03);
+}
+
+.spotify {
+  background-color: rgba(29, 185, 84, 0.4);
+  border: 2px solid #1DB954;
+}
+.spotify:hover {
+  background-color: #1DB954;
+  transform: scale(1.03);
 }
 
 .portfolio {
-  background-color: rgba(3, 0, 26, 0.4);
-  border: 2px solid #03001a;
+  background-color: rgba(10, 14, 23, 0.4);
+  border: 2px solid #0A0E17;
 }
 .portfolio:hover {
-  background-color: #03001a;
+  background-color: #0A0E17;
+  transform: scale(1.03);
 }
 
 .linkedin {
@@ -111,6 +139,7 @@ a i {
 }
 .linkedin:hover {
   background-color: #0077B5;
+  transform: scale(1.03);
 }
 
 .github {
@@ -119,6 +148,7 @@ a i {
 }
 .github:hover {
   background-color: #171515;
+  transform: scale(1.03);
 }
 
 .behance {
@@ -127,6 +157,7 @@ a i {
 }
 .behance:hover {
   background-color: #1769FF;
+  transform: scale(1.03);
 }
 
 .mail {
@@ -135,6 +166,7 @@ a i {
 }
 .mail:hover {
   background-color: #D44638;
+  transform: scale(1.03);
 }
 
 hr {
@@ -149,6 +181,7 @@ hr {
   font-weight: 600;
   font-family: "Montserrat";
   margin-top: 50px;
+  text-align: center;
 }
 
 @media screen and (max-width: 600px) {
